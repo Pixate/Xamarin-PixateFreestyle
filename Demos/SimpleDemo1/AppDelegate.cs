@@ -28,11 +28,6 @@ namespace SimpleDemo1
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			// 
-			// ENTER YOUR LICENSE INFO HERE
-			//
-			PXEngine.LicenseKeyForUser("SERIAL NUMBER", "USER NAME");
-
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			viewController = new SimpleDemo1ViewController ();
 			window.RootViewController = viewController;

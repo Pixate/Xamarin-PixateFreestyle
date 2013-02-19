@@ -81,7 +81,7 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="Pixate">
-      <HintPath>..\..\Pixate.dll</HintPath>
+      <HintPath>..\..\Module\Pixate.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -27,11 +27,6 @@ namespace SimpleDemo2
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			// 
-			// ENTER YOUR LICENSE INFO HERE
-			//
-			PXEngine.LicenseKeyForUser("SERIAL NUMBER", "USER NAME");
-
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 			
@@ -40,16 +35,14 @@ namespace SimpleDemo2
 			// make the window visible
 			window.MakeKeyAndVisible ();
 
-			PXEngine shared = PXEngine.SharedInstance();
-
 			// Print the version an build date
-			Console.WriteLine("Pixate Engine v{0} {1}", shared.Version, shared.BuildDate);
+			Console.WriteLine("Pixate Engine v{0} {1}", PXEngine.Version, PXEngine.BuildDate);
 
 			// Print the location of the current application-level stylesheet
-			Console.WriteLine("CSS File location: {0}", PXStylesheet.CurrentApplicationStylesheet().FilePath);
+			Console.WriteLine("CSS File location: {0}", PXEngine.CurrentApplicationStylesheet().FilePath);
 
 			// Monitor for changes in the stylesheet and update styles live
-			PXStylesheet.CurrentApplicationStylesheet().MonitorChanges = true;
+			PXEngine.CurrentApplicationStylesheet().MonitorChanges = true;
 
 			return true;
 		}
@@ -83,9 +76,7 @@ namespace SimpleDemo2
 			PXEngine.SetStyleId(button3, "myButton3");
 			PXEngine.SetStyleClass(button1, "allButtons");
 
-
 			PXEngine.SetStyleCSS(button3, "background-color: green; border-radius: 5;");
-
 
 			this.View.AddSubview(button1);
 			this.View.AddSubview(button2);
