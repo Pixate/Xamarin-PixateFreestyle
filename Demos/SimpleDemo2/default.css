@@ -1,0 +1,17 @@
+.allButtons {
+ border-radius: 5;
+}
+
+#myButton1 {
+ background-color: yellow;
+ border-color: black;
+ border-width: 2;
+}
+
+#myButton2 {
+ background-color: blue;
+ border-color: yellow;
+ border-width: 2;
+ color: white;
+}
+
