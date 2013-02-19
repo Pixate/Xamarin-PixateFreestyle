@@ -175,4 +175,9 @@ And you would get something like this:
 
 ![](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/monotouch-sample1.png)
 
+## License
+
+The Pixate Engine runtime included here is for demonstrations / trial use only. Please visit [Pixate.com](http://www.pixate.com) for licensing information.
+
+License for the included Demos is available in the accompanying [LICENSE.md](https://github.com/Pixate/MonoTouch-Pixate/blob/master/LICENSE.md) file.
 
