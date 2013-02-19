@@ -1,8 +1,5 @@
-PXEngine
-Pixate.dll
 *.userprefs
 .DS_Store
 *.log
 bin/
 obj/
-

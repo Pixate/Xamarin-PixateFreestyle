@@ -1,8 +1,6 @@
 MonoTouch-Pixate
 ================
 
-*Note: The .ZIP and .TAR download links are for the source code to the library, see the next section to download the precompiled binary DLL.*
-
 To demonstrate the use of Pixate within MonoTouch, we'll be using Xamarin's MonoDevelop IDE. Let's get started by creating a new solution. We'll start with creating a C# -> MonoTouch -> Single View Application solution:
 
 ![Single View Application](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/single_view_application.png)
@@ -176,24 +174,5 @@ The CSS for these three buttons could be:
 And you would get something like this:
 
 ![](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/monotouch-sample1.png)
-
-
-<a id="build_dll"></a>Pixate.dll Build Instructions
-----------------------
-
-If you'd like to build the DLL yourself, this is the simple process.
-After cloning this project, start by creating a symbolic link to the PXEngine file from your Pixate distribution in this same location. For example:
-	
-	ln -s ~/Desktop/Pixate/Frameworks/PXEngine.framework/PXEngine   .
-
-Make sure the path to the MonoTouch BTOUCH tool is properly set at the top of the Makefile:
-
-	BTOUCH=/Developer/MonoTouch/usr/bin/btouch
-
-Now just type make:
-
-	make
-
-The resulting `Pixate.dll` file can now be added to your MonoTouch project.
 
 
