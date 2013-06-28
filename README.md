@@ -32,16 +32,16 @@ Right-click on the `default.css` file you added and select the 'Properties' menu
 ## Setting up for Styling
 
 At this point, let's add a button or two to our application. Double-click on the .xib file for your project (e.g. <ProjectName>ViewController.xib). Add a couple of buttons like the following:
-	
+
 ![Two Buttons](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/two_buttons.png)
-	
-With each of the new buttons you added, select one, activate the Identity Inspector in the Utilities View. 
+
+With each of the new buttons you added, select one, activate the Identity Inspector in the Utilities View.
 
 Now we need to give the buttons a "styleId" so that you can reference it from your CSS. We'll add a Runtime Attribute. Click the small '+' and add an entry with a key path of `styleId`, a type of `String`, and a value of `button1`. For the second button add a `styleId`, a type of `String`, and a value of `button2`.
 
 ![Runtime Attribute](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/styleId.png)
 
-Now save and close Xcode. 
+Now save and close Xcode.
 
 ## Set up the Pixate license
 
@@ -80,7 +80,7 @@ Now comes the easy part, just open your default.css file and add some CSS. For o
 		border-color     : black;
 		border-radius    : 8px;
 	}
-```	
+```
 
 ## First Styled App
 
@@ -125,7 +125,7 @@ If you programmatically create your UI, this library [*will soon*] support the f
 	view.SetStyleClass("StyleClass");
 	view.SetStyleCSS("StyleCSS");
 ```
-	
+
 For example, here's some code that creates 3 buttons, each with a unique ID, all three with the same Class, and the third styled inline with CSS:
 
 ```csharp
@@ -168,12 +168,30 @@ The CSS for these three buttons could be:
 	 border-color: yellow;
 	 border-width: 2;
 	}
-	
+
 ```
 
 And you would get something like this:
 
 ![](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/monotouch-sample1.png)
+
+## Pixate.dll Build Instructions
+
+If you'd like to build the DLL yourself, this is the simple process.
+After cloning this project, start by creating a symbolic link to the PXEngine file from your Pixate distribution in the Source folder. For example:
+
+    cd Source
+	ln -s ~/Desktop/Pixate/Frameworks/PXEngine.framework/PXEngine   .
+
+Make sure the path to the MonoTouch BTOUCH tool is properly set at the top of the Makefile:
+
+	BTOUCH=/Developer/MonoTouch/usr/bin/btouch
+
+Now just type make:
+
+	make
+
+The resulting `Pixate.dll` file can now be added to your MonoTouch project.
 
 ## License
 
