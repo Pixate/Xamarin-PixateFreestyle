@@ -195,7 +195,6 @@ The resulting `Pixate.dll` file can now be added to your MonoTouch project.
 
 ## License
 
-The Pixate Engine runtime included here is for demonstrations / trial use only. Please visit [Pixate.com](http://www.pixate.com) for licensing information.
+License for the included demos is available in the accompanying [LICENSE.md](https://github.com/Pixate/MonoTouch-Pixate/blob/master/Demos/LICENSE.md) file.
 
-License for the included Demos is available in the accompanying [LICENSE.md](https://github.com/Pixate/MonoTouch-Pixate/blob/master/LICENSE.md) file.
-
+License for the included source is available in the accompanying [LICENSE.md](https://github.com/Pixate/MonoTouch-Pixate/blob/master/Source/LICENSE.md) file.
