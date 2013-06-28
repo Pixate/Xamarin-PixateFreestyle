@@ -1,3 +1,20 @@
+/*
+ *	Copyright (c) 2012-2013, Pixate, Inc
+ *	All rights reserved.
+ *
+ *	This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 using MonoTouch.Foundation;
 using MonoTouch.ObjCRuntime;
 using System;
@@ -57,22 +74,22 @@ namespace PixateLib
 		{
 			PixateLib.PXEngine.SetStyleClass (view, styleClass);
 		}
-		
+
 		public static void SetStyleCSS (this UIBarButtonItem view, string styleCss)
 		{
 			PixateLib.PXEngine.SetStyleCSS (view, styleCss);
 		}
-		
+
 		public static void SetStyleId (this UIBarButtonItem view, string styleId)
 		{
 			PixateLib.PXEngine.SetStyleId (view, styleId);
 		}
-		
+
 		public static void UpdateStyles (this UIBarButtonItem view)
 		{
 			PixateLib.PXEngine.UpdateStyles (view);
 		}
-		
+
 		public static void UpdateStylesNonRecursively (this UIBarButtonItem view)
 		{
 			PixateLib.PXEngine.UpdateStylesNonRecursively (view);
@@ -85,22 +102,22 @@ namespace PixateLib
 		{
 			PixateLib.PXEngine.SetStyleClass (view, styleClass);
 		}
-		
+
 		public static void SetStyleCSS (this UITabBarItem view, string styleCss)
 		{
 			PixateLib.PXEngine.SetStyleCSS (view, styleCss);
 		}
-		
+
 		public static void SetStyleId (this UITabBarItem view, string styleId)
 		{
 			PixateLib.PXEngine.SetStyleId (view, styleId);
 		}
-		
+
 		public static void UpdateStyles (this UITabBarItem view)
 		{
 			PixateLib.PXEngine.UpdateStyles(view);
 		}
-		
+
 		public static void UpdateStylesNonRecursively (this UITabBarItem view)
 		{
 			PixateLib.PXEngine.UpdateStylesNonRecursively(view);
