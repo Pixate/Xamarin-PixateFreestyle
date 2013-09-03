@@ -22,6 +22,8 @@ using MonoTouch.Foundation;
 using MonoTouch.ObjCRuntime;
 using System;
 using MonoTouch.UIKit;
+
+using System.Linq;
 using System.Collections.Generic;
 
 namespace PixateLib
@@ -45,7 +47,7 @@ namespace PixateLib
 		//
 		public static string GetStyleClass (NSObject obj)
 		{
-			return (NSString) obj.ValueForKey(new NSString ("styleClass"));
+			return (NSString) obj.ValueForKey (new NSString ("styleClass"));
 		}
 		public static void SetStyleClass (NSObject obj, string id)
 		{
@@ -55,9 +57,9 @@ namespace PixateLib
 		//
 		// styleCSS
 		//
-		public static NSString GetStyleCSS (NSObject obj)
+		public static string GetStyleCSS (NSObject obj)
 		{
-			return (NSString) obj.ValueForKey(new NSString ("styleCSS"));
+			return (NSString) obj.ValueForKey (new NSString ("styleCSS"));
 		}
 		public static void SetStyleCSS (NSObject obj, string id)
 		{
@@ -69,11 +71,14 @@ namespace PixateLib
 		//
 		public static PXStylingMode GetStyleMode (NSObject obj)
 		{
-			return (PXStylingMode) ((NSNumber) obj.ValueForKey (new NSString ("styleMode"))).IntValue;
+			var mode = obj.ValueForKey (new NSString ("styleMode"));
+			var modeString = mode.ToString ();
+			return (PXStylingMode)Enum.Parse (typeof(PXStylingMode), modeString);
 		}
 		public static void SetStyleMode (NSObject obj, PXStylingMode mode)
 		{
-			obj.SetValueForKeyPath (new NSNumber((int) mode), new NSString ("styleMode"));
+			var modeNum = new NSNumber ((int)mode);
+			obj.SetValueForKeyPath (modeNum, new NSString ("styleMode"));
 		}
 	}
 
@@ -153,8 +158,7 @@ namespace PixateLib
 		//
 		// Add / Remove Classes to a UIView
 		//
-		/*
-		public static void AddClass(this UIView view, string styleClass)
+		public static void AddStyleClass(this UIView view, string styleClass)
 		{
 			// Store result of kvp to check if a value exists
 			object classesObject = view.GetStyleClass ();
@@ -163,7 +167,7 @@ namespace PixateLib
 			string classes = classesObject != null ? classesObject.ToString() : string.Empty;
 
 			// Append our requested class/es
-			List<String> splits = classes.Split ().toList ();
+			List<String> splits = classes.Split ().ToList ();
 			splits.Add(styleClass);
 
 			// Remove duplicate classes and re-stringify
@@ -174,7 +178,7 @@ namespace PixateLib
 			view.UpdateStyles();
 		}
 
-		public static void RemoveClass(this UIView view, string styleClass)
+		public static void RemoveStyleClass(this UIView view, string styleClass)
 		{
 			// Store result of kvp to check if a value exists
 			object classesObject = view.GetStyleClass ();
@@ -183,7 +187,7 @@ namespace PixateLib
 			string classes = classesObject != null ? classesObject.ToString() : string.Empty;
 
 			// Remove our requested class
-			List<String> splits = classes.Split ().toList ();
+			List<String> splits = classes.Split ().ToList ();
 			splits.Remove(styleClass);
 
 			// Re-stringify
@@ -193,7 +197,6 @@ namespace PixateLib
 			view.SetStyleClass (classes);
 			view.UpdateStyles();
 		}
-		*/
 	}
 
 	public static class PXUIBarButtonItemExtensions

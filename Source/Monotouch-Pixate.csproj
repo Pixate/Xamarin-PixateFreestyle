@@ -51,4 +51,9 @@
     <Compile Include="extra.cs" />
     <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="..\..\..\..\..\..\Library\Developer\Xcode\DerivedData\Pixate_Engine-cxbqfllitlqcspcaxewxldmpknhu\Build\Products\Debug-iphonesimulator\PXEngine.framework\Versions\1.1\PXEngine">
+      <Link>Resources\PXEngine</Link>
+    </ObjcBindingNativeLibrary>
+  </ItemGroup>
 </Project>
