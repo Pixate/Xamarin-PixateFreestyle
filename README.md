@@ -1,7 +1,7 @@
 MonoTouch-Pixate
 ================
 
-To demonstrate the use of Pixate within MonoTouch, we'll be using Xamarin's MonoDevelop IDE. Let's get started by creating a new solution. We'll start with creating a C# -> MonoTouch -> Single View Application solution:
+To demonstrate the use of Pixate 1.1 (beta 4 or later) within MonoTouch, we'll be using Xamarin's MonoDevelop IDE. Let's get started by creating a new solution. We'll start with creating a C# -> MonoTouch -> Single View Application solution:
 
 ![Single View Application](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/single_view_application.png)
 
@@ -45,7 +45,7 @@ Now save and close Xcode.
 
 ## Set up the Pixate license
 
-At the top of your Main.cs file, add this import line:
+At the top of your *Main.cs* file, add this import line:
 
 ```csharp
 	using PixateLib;
@@ -58,6 +58,14 @@ Then, at the beginning of your Main method, add this line:
 ```
 
 Be sure to replace *SERIAL NUMBER* and *USER NAME* with your licensing information. If you do not have a license and wish to run in free mode, you will still need this line of code. Simply replace *SERIAL NUMBER* and *USER NAME* with empty strings.
+
+In your *AppDelegate.cs* file, in your *FinishedLaunching* method, anywhere *after* you have created your window but *before* you call MakeKeyAndVisible(), add the following:
+
+```csharp
+	window.SetStyleMode (PXStylingMode.PXStylingNormal);
+```
+
+This tells the root window to style all of its subviews.
 
 Before we style the buttons, go ahead and run the project in MonoDevelop. It should look something like this:
 
@@ -73,12 +81,14 @@ Now comes the easy part, just open your default.css file and add some CSS. For o
 		border-width     : 2px;
 		border-color     : black;
 		border-radius    : 8px;
+		border-style     : solid;
 	}
 	#button2 {
 		background-color : gray;
 		border-width     : 2px;
 		border-color     : black;
 		border-radius    : 8px;
+		border-style     : solid;
 	}
 ```
 
@@ -106,6 +116,7 @@ Here's some slightly fancier styling you can try:
 	  background-color : linear-gradient(#87c44a, #b4da77);
 	  border-width     : 1px;
 	  border-color     : #84a254;
+	  border-style     : solid;
 	  border-radius    : 10px;
 	  font-size        : 13px;
 	}
@@ -161,12 +172,14 @@ The CSS for these three buttons could be:
 	 background-color: yellow;
 	 border-color: black;
 	 border-width: 2;
+     border-style: solid;
 	}
 
 	#myButton2 {
 	 background-color: blue;
 	 border-color: yellow;
 	 border-width: 2;
+     border-style: solid;
 	}
 
 ```
@@ -174,6 +187,26 @@ The CSS for these three buttons could be:
 And you would get something like this:
 
 ![](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/monotouch-sample1.png)
+
+## Making changes in real-time
+
+To turn on real-time monitoring of your CSS for live editing, first you'll need to turn on file monitoring in your AppDelegate, anywhere in the FinishedLaunching method. Add the following:
+
+```csharp
+	PXEngine.CurrentApplicationStylesheet().MonitorChanges = true;
+```
+
+You may want to print out the location of the CSS file Pixate is using so you can edit it (by default your default.css will be loaded out of your app's resources). Use the following to get the temporary CSS file location:
+
+```csharp
+	string path = PXEngine.CurrentApplicationStylesheet().FilePath;
+```
+
+You'll want to print this location out to the console and then edit it. Be sure to save your changes to another file before you run your app again, otherwise your changes will be overwritten. Alternetaively, you can load your CSS from a location on your file system during development (i.e. a DropBox folder) to easier editing: 
+
+```csharp
+	PXEngine.StyleSheetFromFilePathWithOrigin("/some/path/myStyle.css", PXStylesheetOrigin.PXStylesheetOriginApplication);
+```
 
 ## Pixate.dll Build Instructions
 

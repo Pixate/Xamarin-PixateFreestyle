@@ -43,4 +43,11 @@ namespace PixateLib
 		PXCacheStylesTypeAuto,
 		PXCacheStylesTypeNone,
 	}
+
+	public enum PXStylingMode
+	{
+		PXStylingUndefined = -1,
+		PXStylingNone,
+		PXStylingNormal,
+	}
 }
