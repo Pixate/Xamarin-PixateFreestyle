@@ -3,3 +3,7 @@
 *.log
 bin/
 obj/
+
+/Source/PXEngine-debug
+/Source/PXEngine
+/Source/Pixate.dll
