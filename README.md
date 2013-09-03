@@ -81,12 +81,14 @@ Now comes the easy part, just open your default.css file and add some CSS. For o
 		border-width     : 2px;
 		border-color     : black;
 		border-radius    : 8px;
+		border-style     : solid;
 	}
 	#button2 {
 		background-color : gray;
 		border-width     : 2px;
 		border-color     : black;
 		border-radius    : 8px;
+		border-style     : solid;
 	}
 ```
 
@@ -114,6 +116,7 @@ Here's some slightly fancier styling you can try:
 	  background-color : linear-gradient(#87c44a, #b4da77);
 	  border-width     : 1px;
 	  border-color     : #84a254;
+	  border-style     : solid;
 	  border-radius    : 10px;
 	  font-size        : 13px;
 	}
@@ -169,12 +172,14 @@ The CSS for these three buttons could be:
 	 background-color: yellow;
 	 border-color: black;
 	 border-width: 2;
+     border-style: solid;
 	}
 
 	#myButton2 {
 	 background-color: blue;
 	 border-color: yellow;
 	 border-width: 2;
+     border-style: solid;
 	}
 
 ```
