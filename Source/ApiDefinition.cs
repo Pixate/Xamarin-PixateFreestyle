@@ -79,6 +79,12 @@ namespace PixateLib {
 
 		[Static, Export ("updateStylesnonRecursively:")]
 		void UpdateStylesNonRecursively(NSObject styleable);
+
+		[Static, Export ("updateStylesAsync:")]
+		void UpdateStylesAsync(NSObject styleable);
+
+		[Static, Export ("updateStylesNonRecursivelyAsync:")]
+		void UpdateStylesNonRecursivelyAsync(NSObject styleable);
 	}
 
 	[BaseType (typeof (NSObject))]

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="monotouch" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -48,5 +49,6 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
     <Compile Include="extra.cs" />
+    <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
 </Project>
