@@ -4,12 +4,6 @@
 bin/
 obj/
 
-<<<<<<< HEAD
 /Source/Pixate.dll
 /Source/PXEngine
 /Source/PXEngine-debug
-=======
-/Source/PXEngine-debug
-/Source/PXEngine
-/Source/Pixate.dll
->>>>>>> origin/development
