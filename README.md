@@ -1,4 +1,4 @@
-MonoTouch-Pixate
+Xamarin-Pixate
 ================
 
 To demonstrate the use of Pixate 1.1 (beta 4 or later) within MonoTouch, we'll be using Xamarin's MonoDevelop IDE. Let's get started by creating a new solution. We'll start with creating a C# -> MonoTouch -> Single View Application solution:
