@@ -46,8 +46,8 @@ namespace PixateLib
 
 	public enum PXStylingMode
 	{
-		PXStylingUndefined = -1,
-		PXStylingNone,
+		PXStylingUndefined = 0,
 		PXStylingNormal,
+		PXStylingNone,
 	}
 }
