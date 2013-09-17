@@ -5,3 +5,5 @@ bin/
 obj/
 
 /Source/Pixate/Pixate
+
+/Source/Pixate/Pixate.dll

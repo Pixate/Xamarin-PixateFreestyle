@@ -1,0 +1,20 @@
+button {
+	text			 : Hello From Pixate!
+	color            : #446620;
+	background-color : linear-gradient(#87c44a, #b4da77);
+	border-width     : 1px;
+	border-color     : #84a254;
+	border-radius    : 10px;
+	font-size        : 20px;
+}
+
+.gray {
+	background-image: linear-gradient(gray, white);
+}
+
+.bordered {
+	border-style: solid;
+	border-width: 5;
+	border-color: gray;
+}
+
