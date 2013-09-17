@@ -15,16 +15,17 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 using System;
 using System.Drawing;
 using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace PixateLib {
-
+namespace PixateFramework
+{
 	[BaseType (typeof (NSObject))]
-	interface PXEngine {
+	interface Pixate {
 
 		[Static, Export ("version")]
 		string Version { get; }
@@ -42,7 +43,7 @@ namespace PixateLib {
 		bool RefreshStylesWithOrientationChange { get; set; }
 
 		[Static, Export ("configuration")]
-		PXEngineConfiguration Configuration { get; }
+		PixateConfiguration Configuration { get; }
 
 		[Static, Export ("licenseKey:forUser:")]
 		void LicenseKeyForUser(string key, string user);
@@ -101,7 +102,7 @@ namespace PixateLib {
 	}
 
 	[BaseType (typeof (NSObject))]
-	interface PXEngineConfiguration {
+	interface PixateConfiguration {
 		[Export ("parseErrorDestination")]
 		PXParseErrorDestination ParseErrorDestination { get; set; }
 
@@ -112,3 +113,4 @@ namespace PixateLib {
 		PXCacheStylesType CacheStylesType { get; set; }
 	}
 }
+

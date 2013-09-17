@@ -4,6 +4,4 @@
 bin/
 obj/
 
-/Source/Pixate.dll
-/Source/PXEngine
-/Source/PXEngine-debug
+/Source/Pixate/Pixate

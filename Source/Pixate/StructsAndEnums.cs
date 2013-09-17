@@ -15,15 +15,16 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 using System;
 
-namespace PixateLib
+namespace PixateFramework
 {
 	public enum PXStylesheetOrigin
 	{
 		PXStylesheetOriginApplication,
-	    PXStylesheetOriginUser,
-	    PXStylesheetOriginView
+		PXStylesheetOriginUser,
+		PXStylesheetOriginView
 	}
 
 	public enum PXParseErrorDestination
@@ -46,8 +47,9 @@ namespace PixateLib
 
 	public enum PXStylingMode
 	{
-		PXStylingUndefined = -1,
-		PXStylingNone,
+		PXStylingUndefined = 0,
 		PXStylingNormal,
+		PXStylingNone,
 	}
 }
+
