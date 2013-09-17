@@ -54,7 +54,7 @@ At the top of your *Main.cs* file, add this import line:
 Then, at the beginning of your Main method, add this line:
 
 ```csharp
-	PXEngine.LicenseKeyForUser("SERIAL NUMBER", "USER NAME");
+	Pixate.LicenseKeyForUser("SERIAL NUMBER", "USER NAME");
 ```
 
 Be sure to replace *SERIAL NUMBER* and *USER NAME* with your licensing information. If you do not have a license and wish to run in free mode, you will still need this line of code. Simply replace *SERIAL NUMBER* and *USER NAME* with empty strings.
@@ -193,28 +193,28 @@ And you would get something like this:
 To turn on real-time monitoring of your CSS for live editing, first you'll need to turn on file monitoring in your AppDelegate, anywhere in the FinishedLaunching method. Add the following:
 
 ```csharp
-	PXEngine.CurrentApplicationStylesheet().MonitorChanges = true;
+	Pixate.CurrentApplicationStylesheet().MonitorChanges = true;
 ```
 
 You may want to print out the location of the CSS file Pixate is using so you can edit it (by default your default.css will be loaded out of your app's resources). Use the following to get the temporary CSS file location:
 
 ```csharp
-	string path = PXEngine.CurrentApplicationStylesheet().FilePath;
+	string path = Pixate.CurrentApplicationStylesheet().FilePath;
 ```
 
 You'll want to print this location out to the console and then edit it. Be sure to save your changes to another file before you run your app again, otherwise your changes will be overwritten. Alternetaively, you can load your CSS from a location on your file system during development (i.e. a DropBox folder) to easier editing: 
 
 ```csharp
-	PXEngine.StyleSheetFromFilePathWithOrigin("/some/path/myStyle.css", PXStylesheetOrigin.PXStylesheetOriginApplication);
+	Pixate.StyleSheetFromFilePathWithOrigin("/some/path/myStyle.css", PXStylesheetOrigin.PXStylesheetOriginApplication);
 ```
 
 ## Pixate.dll Build Instructions
 
 If you'd like to build the DLL yourself, this is the simple process.
-After cloning this project, start by creating a symbolic link to the PXEngine file from your Pixate distribution in the Source folder. For example:
+After cloning this project, start by creating a symbolic link to the Pixate file from your Pixate distribution in the Source folder. For example:
 
     cd Source
-	ln -s ~/Desktop/Pixate/Frameworks/PXEngine.framework/PXEngine   .
+	ln -s ~/Desktop/Pixate/Frameworks/Pixate.framework/Pixate   .
 
 Make sure the path to the MonoTouch BTOUCH tool is properly set at the top of the Makefile:
 
