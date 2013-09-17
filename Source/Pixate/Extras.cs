@@ -16,8 +16,6 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// August 28, 2013 - Paul Colton - Added support for Pixate 1.1 beta 4
-
 using MonoTouch.Foundation;
 using MonoTouch.ObjCRuntime;
 using System;
@@ -26,9 +24,9 @@ using MonoTouch.UIKit;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace PixateLib
+namespace PixateFramework
 {
-	public partial class PXEngine
+	public partial class Pixate
 	{
 		//
 		// styleId
@@ -89,11 +87,11 @@ namespace PixateLib
 		//
 		public static string GetStyleClass (this UIView view)
 		{
-			return PixateLib.PXEngine.GetStyleClass (view);
+			return Pixate.GetStyleClass (view);
 		}
 		public static void SetStyleClass (this UIView view, string styleClass)
 		{
-			PixateLib.PXEngine.SetStyleClass (view, styleClass);
+			Pixate.SetStyleClass (view, styleClass);
 		}
 
 		//
@@ -101,11 +99,11 @@ namespace PixateLib
 		//
 		public static string GetStyleCSS (this UIView view)
 		{
-			return PixateLib.PXEngine.GetStyleCSS(view);
+			return Pixate.GetStyleCSS(view);
 		}
 		public static void SetStyleCSS (this UIView view, string styleCss)
 		{
-			PixateLib.PXEngine.SetStyleCSS (view, styleCss);
+			Pixate.SetStyleCSS (view, styleCss);
 		}
 
 		//
@@ -113,11 +111,11 @@ namespace PixateLib
 		//
 		public static string GetStyleId (this UIView view)
 		{
-			return PixateLib.PXEngine.GetStyleId (view);
+			return Pixate.GetStyleId (view);
 		}
 		public static void SetStyleId (this UIView view, string styleId)
 		{
-			PixateLib.PXEngine.SetStyleId (view, styleId);
+			Pixate.SetStyleId (view, styleId);
 		}
 
 		//
@@ -125,11 +123,11 @@ namespace PixateLib
 		//
 		public static PXStylingMode GetStyleMode (this UIView view)
 		{
-			return PixateLib.PXEngine.GetStyleMode (view);
+			return Pixate.GetStyleMode (view);
 		}
 		public static void SetStyleMode (this UIView view, PXStylingMode mode)
 		{
-			PixateLib.PXEngine.SetStyleMode (view, mode);
+			Pixate.SetStyleMode (view, mode);
 		}
 
 		//
@@ -137,22 +135,22 @@ namespace PixateLib
 		//
 		public static void UpdateStyles (this UIView view)
 		{
-			PixateLib.PXEngine.UpdateStyles (view);
+			Pixate.UpdateStyles (view);
 		}
 
 		public static void UpdateStylesNonRecursively (this UIView view)
 		{
-			PixateLib.PXEngine.UpdateStylesNonRecursively (view);
+			Pixate.UpdateStylesNonRecursively (view);
 		}
 
 		public static void UpdateStylesAsync (this UIView view)
 		{
-			PixateLib.PXEngine.UpdateStylesAsync (view);
+			Pixate.UpdateStylesAsync (view);
 		}
 
 		public static void UpdateStylesNonRecursivelyAsync (this UIView view)
 		{
-			PixateLib.PXEngine.UpdateStylesNonRecursivelyAsync (view);
+			Pixate.UpdateStylesNonRecursivelyAsync (view);
 		}
 
 		//
@@ -206,11 +204,11 @@ namespace PixateLib
 		//
 		public static string GetStyleClass (this UIBarButtonItem view)
 		{
-			return PixateLib.PXEngine.GetStyleClass (view);
+			return Pixate.GetStyleClass (view);
 		}
 		public static void SetStyleClass (this UIBarButtonItem view, string styleClass)
 		{
-			PixateLib.PXEngine.SetStyleClass (view, styleClass);
+			Pixate.SetStyleClass (view, styleClass);
 		}
 
 		//
@@ -218,11 +216,11 @@ namespace PixateLib
 		//
 		public static string GetStyleCSS (this UIBarButtonItem view)
 		{
-			return PixateLib.PXEngine.GetStyleCSS(view);
+			return Pixate.GetStyleCSS(view);
 		}
 		public static void SetStyleCSS (this UIBarButtonItem view, string styleCss)
 		{
-			PixateLib.PXEngine.SetStyleCSS (view, styleCss);
+			Pixate.SetStyleCSS (view, styleCss);
 		}
 
 		//
@@ -230,11 +228,11 @@ namespace PixateLib
 		//
 		public static string GetStyleId (this UIBarButtonItem view)
 		{
-			return PixateLib.PXEngine.GetStyleId (view);
+			return Pixate.GetStyleId (view);
 		}
 		public static void SetStyleId (this UIBarButtonItem view, string styleId)
 		{
-			PixateLib.PXEngine.SetStyleId (view, styleId);
+			Pixate.SetStyleId (view, styleId);
 		}
 
 		//
@@ -242,11 +240,11 @@ namespace PixateLib
 		//
 		public static PXStylingMode GetStyleMode (this UIBarButtonItem view)
 		{
-			return PixateLib.PXEngine.GetStyleMode (view);
+			return Pixate.GetStyleMode (view);
 		}
 		public static void SetStyleMode (this UIBarButtonItem view, PXStylingMode mode)
 		{
-			PixateLib.PXEngine.SetStyleMode (view, mode);
+			Pixate.SetStyleMode (view, mode);
 		}
 
 		//
@@ -254,22 +252,22 @@ namespace PixateLib
 		//
 		public static void UpdateStyles (this UIBarButtonItem view)
 		{
-			PixateLib.PXEngine.UpdateStyles (view);
+			Pixate.UpdateStyles (view);
 		}
 
 		public static void UpdateStylesNonRecursively (this UIBarButtonItem view)
 		{
-			PixateLib.PXEngine.UpdateStylesNonRecursively (view);
+			Pixate.UpdateStylesNonRecursively (view);
 		}
 
 		public static void UpdateStylesAsync (this UIBarButtonItem view)
 		{
-			PixateLib.PXEngine.UpdateStylesAsync (view);
+			Pixate.UpdateStylesAsync (view);
 		}
 
 		public static void UpdateStylesNonRecursivelyAsync (this UIBarButtonItem view)
 		{
-			PixateLib.PXEngine.UpdateStylesNonRecursivelyAsync (view);
+			Pixate.UpdateStylesNonRecursivelyAsync (view);
 		}
 
 	}
@@ -281,11 +279,11 @@ namespace PixateLib
 		//
 		public static string GetStyleClass (this UITabBarItem view)
 		{
-			return PixateLib.PXEngine.GetStyleClass (view);
+			return Pixate.GetStyleClass (view);
 		}
 		public static void SetStyleClass (this UITabBarItem view, string styleClass)
 		{
-			PixateLib.PXEngine.SetStyleClass (view, styleClass);
+			Pixate.SetStyleClass (view, styleClass);
 		}
 
 		//
@@ -293,11 +291,11 @@ namespace PixateLib
 		//
 		public static string GetStyleCSS (this UITabBarItem view)
 		{
-			return PixateLib.PXEngine.GetStyleCSS(view);
+			return Pixate.GetStyleCSS(view);
 		}
 		public static void SetStyleCSS (this UITabBarItem view, string styleCss)
 		{
-			PixateLib.PXEngine.SetStyleCSS (view, styleCss);
+			Pixate.SetStyleCSS (view, styleCss);
 		}
 
 		//
@@ -305,11 +303,11 @@ namespace PixateLib
 		//
 		public static string GetStyleId (this UITabBarItem view)
 		{
-			return PixateLib.PXEngine.GetStyleId (view);
+			return Pixate.GetStyleId (view);
 		}
 		public static void SetStyleId (this UITabBarItem view, string styleId)
 		{
-			PixateLib.PXEngine.SetStyleId (view, styleId);
+			Pixate.SetStyleId (view, styleId);
 		}
 
 		//
@@ -317,11 +315,11 @@ namespace PixateLib
 		//
 		public static PXStylingMode GetStyleMode (this UITabBarItem view)
 		{
-			return PixateLib.PXEngine.GetStyleMode (view);
+			return Pixate.GetStyleMode (view);
 		}
 		public static void SetStyleMode (this UITabBarItem view, PXStylingMode mode)
 		{
-			PixateLib.PXEngine.SetStyleMode (view, mode);
+			Pixate.SetStyleMode (view, mode);
 		}
 
 		//
@@ -330,22 +328,22 @@ namespace PixateLib
 
 		public static void UpdateStyles (this UITabBarItem view)
 		{
-			PixateLib.PXEngine.UpdateStyles(view);
+			Pixate.UpdateStyles(view);
 		}
 
 		public static void UpdateStylesNonRecursively (this UITabBarItem view)
 		{
-			PixateLib.PXEngine.UpdateStylesNonRecursively(view);
+			Pixate.UpdateStylesNonRecursively(view);
 		}
 
 		public static void UpdateStylesAsync (this UITabBarItem view)
 		{
-			PixateLib.PXEngine.UpdateStylesAsync (view);
+			Pixate.UpdateStylesAsync (view);
 		}
 
 		public static void UpdateStylesNonRecursivelyAsync (this UITabBarItem view)
 		{
-			PixateLib.PXEngine.UpdateStylesNonRecursivelyAsync (view);
+			Pixate.UpdateStylesNonRecursivelyAsync (view);
 		}
 
 
