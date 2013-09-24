@@ -78,7 +78,7 @@ namespace PixateFramework
 		[Static, Export ("updateStyles:")]
 		void UpdateStyles(NSObject styleable);
 
-		[Static, Export ("updateStylesnonRecursively:")]
+		[Static, Export ("updateStylesNonRecursively:")]
 		void UpdateStylesNonRecursively(NSObject styleable);
 
 		[Static, Export ("updateStylesAsync:")]
