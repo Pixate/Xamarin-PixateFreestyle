@@ -72,8 +72,12 @@ namespace PixateFramework
 		[Static, Export ("currentViewStylesheet")]
 		PXStylesheet CurrentViewStylesheet();
 
+		// DEPRECATED as of 2.0RC2
 		[Static, Export ("applyStylesheets")]
 		void ApplyStylesheets();
+
+		[Static, Export ("updateStylesForAllViews")]
+		void UpdateStylesForAllViews();
 
 		[Static, Export ("updateStyles:")]
 		void UpdateStyles(NSObject styleable);
