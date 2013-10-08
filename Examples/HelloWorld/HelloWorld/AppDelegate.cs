@@ -28,6 +28,9 @@ namespace HelloWorld
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 
+			Pixate.CurrentApplicationStylesheet ().MonitorChanges = true;
+			Console.WriteLine ("CSS FILE: " + Pixate.CurrentApplicationStylesheet ().FilePath);
+
 			// Make the main window styleable
 			window.SetStyleMode (PXStylingMode.PXStylingNormal);
 
