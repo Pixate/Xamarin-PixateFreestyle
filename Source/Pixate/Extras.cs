@@ -24,6 +24,10 @@ using MonoTouch.UIKit;
 using System.Linq;
 using System.Collections.Generic;
 
+//
+// Extras for Pixate Framework API version 2 or greater
+//
+
 namespace PixateFramework
 {
 	public partial class Pixate
@@ -197,6 +201,7 @@ namespace PixateFramework
 		}
 	}
 
+	// Category extension on UIBarButtonItem
 	public static class PXUIBarButtonItemExtensions
 	{
 		//
@@ -272,6 +277,7 @@ namespace PixateFramework
 
 	}
 
+	// Category extension on UITabBarItem
 	public static class PXUITabBarItemExtensions
 	{
 		//
@@ -345,7 +351,82 @@ namespace PixateFramework
 		{
 			Pixate.UpdateStylesNonRecursivelyAsync (view);
 		}
-
-
 	}
+
+	// Category extension on UINavigationItem
+	public static class PXUINavigationItemExtensions
+	{
+		//
+		// StyleClass
+		//
+		public static string GetStyleClass (this UINavigationItem view)
+		{
+			return Pixate.GetStyleClass (view);
+		}
+		public static void SetStyleClass (this UINavigationItem view, string styleClass)
+		{
+			Pixate.SetStyleClass (view, styleClass);
+		}
+
+		//
+		// StyleCSS
+		//
+		public static string GetStyleCSS (this UINavigationItem view)
+		{
+			return Pixate.GetStyleCSS(view);
+		}
+		public static void SetStyleCSS (this UINavigationItem view, string styleCss)
+		{
+			Pixate.SetStyleCSS (view, styleCss);
+		}
+
+		//
+		// StyleId
+		//
+		public static string GetStyleId (this UINavigationItem view)
+		{
+			return Pixate.GetStyleId (view);
+		}
+		public static void SetStyleId (this UINavigationItem view, string styleId)
+		{
+			Pixate.SetStyleId (view, styleId);
+		}
+
+		//
+		// StyleMode
+		//
+		public static PXStylingMode GetStyleMode (this UINavigationItem view)
+		{
+			return Pixate.GetStyleMode (view);
+		}
+		public static void SetStyleMode (this UINavigationItem view, PXStylingMode mode)
+		{
+			Pixate.SetStyleMode (view, mode);
+		}
+
+		//
+		// Update Styles Methods
+		//
+
+		public static void UpdateStyles (this UINavigationItem view)
+		{
+			Pixate.UpdateStyles(view);
+		}
+
+		public static void UpdateStylesNonRecursively (this UINavigationItem view)
+		{
+			Pixate.UpdateStylesNonRecursively(view);
+		}
+
+		public static void UpdateStylesAsync (this UINavigationItem view)
+		{
+			Pixate.UpdateStylesAsync (view);
+		}
+
+		public static void UpdateStylesNonRecursivelyAsync (this UINavigationItem view)
+		{
+			Pixate.UpdateStylesNonRecursivelyAsync (view);
+		}
+	}
+
 }

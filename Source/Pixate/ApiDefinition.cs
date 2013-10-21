@@ -22,6 +22,10 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
+//
+// API mapping for Pixate Framework API version 2 or greater
+//
+
 namespace PixateFramework
 {
 	[BaseType (typeof (NSObject))]
@@ -29,6 +33,9 @@ namespace PixateFramework
 
 		[Static, Export ("version")]
 		string Version { get; }
+
+		[Static, Export ("apiVersion")]
+		string APIVersion { get; }
 
 		[Static, Export ("buildDate")]
 		NSDate BuildDate { get; }
@@ -72,10 +79,6 @@ namespace PixateFramework
 		[Static, Export ("currentViewStylesheet")]
 		PXStylesheet CurrentViewStylesheet();
 
-		// DEPRECATED as of 2.0RC2
-		[Static, Export ("applyStylesheets")]
-		void ApplyStylesheets();
-
 		[Static, Export ("updateStylesForAllViews")]
 		void UpdateStylesForAllViews();
 
@@ -90,6 +93,10 @@ namespace PixateFramework
 
 		[Static, Export ("updateStylesNonRecursivelyAsync:")]
 		void UpdateStylesNonRecursivelyAsync(NSObject styleable);
+
+		// DEPRECATED applyStylesheets is deprecated as of 2.0RC2
+		[Static, Export ("applyStylesheets")]
+		void ApplyStylesheets();
 	}
 
 	[BaseType (typeof (NSObject))]
@@ -109,9 +116,6 @@ namespace PixateFramework
 	interface PixateConfiguration {
 		[Export ("parseErrorDestination")]
 		PXParseErrorDestination ParseErrorDestination { get; set; }
-
-		[Export ("updateStylesType")]
-		PXUpdateStylesType UpdateStylesType { get; set; }
 
 		[Export ("cacheStylesType")]
 		PXCacheStylesType CacheStylesType { get; set; }

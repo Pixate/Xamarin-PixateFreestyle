@@ -18,6 +18,10 @@
 
 using System;
 
+//
+// Structures and enums for Pixate Framework API version 2 or greater
+//
+
 namespace PixateFramework
 {
 	public enum PXStylesheetOrigin
@@ -31,12 +35,6 @@ namespace PixateFramework
 	{
 		PXParseErrorDestinationNone,
 		PXParseErrorDestinationConsole,
-	}
-
-	public enum PXUpdateStylesType
-	{
-		PXUpdateStylesTypeAuto,
-		PXUpdateStylesTypeManual,
 	}
 
 	public enum PXCacheStylesType
