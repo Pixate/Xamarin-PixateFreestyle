@@ -53,11 +53,11 @@
     <Compile Include="Extras.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="..\..\..\..\..\..\Desktop\pixate-build\build.sym\Release-iphonesimulator\Pixate.framework\Versions\1.1\Pixate">
-      <Link>Resources\Pixate</Link>
-    </ObjcBindingNativeLibrary>
+    <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Makefile" />
+    <ObjcBindingNativeLibrary Include="..\..\..\..\..\..\..\Desktop\Builds\Xamarin\Pixate.framework\Versions\2.0\Pixate">
+      <Link>Pixate</Link>
+    </ObjcBindingNativeLibrary>
   </ItemGroup>
 </Project>
