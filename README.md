@@ -1,7 +1,7 @@
 Xamarin-Pixate
 ================
 
-To demonstrate the use of Pixate 1.1 (beta 4 or later) within MonoTouch, we'll be using Xamarin's MonoDevelop IDE. Let's get started by creating a new solution. We'll start with creating a C# -> MonoTouch -> Single View Application solution:
+To demonstrate the use of Pixate 2.0 within Xamarin.iOS, we'll be using Xamarin Studio. Let's get started by creating a new solution. We'll start with creating a C# -> iOS -> Single View Application solution:
 
 ![Single View Application](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/single_view_application.png)
 
@@ -13,7 +13,7 @@ Now right-click on your project's References folder in the Solution view and sel
 
 ![Add Native Ref](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/edit_reference.png)
 
-Now add the `Pixate.dll` file that you can [download from here](http://www.pixate.com/prerelease/engine/ios/PixateDLL-1.0RC3.zip) if you don't already have it.  You can also [build the DLL](#pixatedll-build-instructions) yourself.
+Now add the `Pixate.dll` file that you can get from the Binaries folder of this repo if you don't already have it.  You can also [build the DLL](#pixatedll-build-instructions) yourself.
 
 The dialog should look something like this:
 
@@ -172,14 +172,14 @@ The CSS for these three buttons could be:
 	 background-color: yellow;
 	 border-color: black;
 	 border-width: 2;
-     border-style: solid;
+	 border-style: solid;
 	}
 
 	#myButton2 {
 	 background-color: blue;
 	 border-color: yellow;
 	 border-width: 2;
-     border-style: solid;
+	 border-style: solid;
 	}
 
 ```
