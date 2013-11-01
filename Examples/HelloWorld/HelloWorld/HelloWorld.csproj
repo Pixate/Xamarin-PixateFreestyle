@@ -87,7 +87,7 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="Pixate">
-      <HintPath>..\..\..\Binaries\2.0RC1\Pixate.dll</HintPath>
+      <HintPath>..\..\..\Source\Pixate\Pixate.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
