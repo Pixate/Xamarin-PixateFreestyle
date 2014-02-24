@@ -10,7 +10,7 @@ This repo contains the iOS and Android (coming soon) modules for Xamarin.iOS and
 
 The fastest way to get started is to download the latest pre-compiled DLL from the [releases section](https://github.com/Pixate/Xamarin-PixateFreestyle/releases) of this repo. You can now clone this repo and run the [HelloWorld example project](https://github.com/Pixate/Xamarin-PixateFreestyle/tree/master/Examples). Be sure to **update the location of the PixateFreestyle.dll** in the sample project to wherever you placed your downloaded copy.
 
-### Creating a Sample Project
+## Creating a Sample Project
 	
 Let's get started by creating a new solution. We'll start with creating a C# -> iOS -> Single View Application solution:
 
