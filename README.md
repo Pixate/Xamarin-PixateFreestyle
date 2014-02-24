@@ -52,7 +52,7 @@ Now we need to give the buttons a "styleId" so that you can reference it from yo
 
 ![Runtime Attribute](https://raw.github.com/Pixate/Xamarin-PixateFreestyle/master/Screenshots/styleId.png)
 
-Now save and close Xcode. In your Main.cs file, be sure to add the following line:
+Now save and close Xcode. In your **Main.cs** file, be sure to add the following line:
 
 ```csharp
 	PixateFreestyleLib.PixateFreestyle.InitializePixateFreestyle ();
@@ -238,7 +238,7 @@ Now just type make:
 
 	make
 
-The resulting `PixateFreestyle.dll` file can now be added to your MonoTouch project.
+The resulting `PixateFreestyle.dll` file can now be added to your Xamarin Studio project.
 
 ## License
 
