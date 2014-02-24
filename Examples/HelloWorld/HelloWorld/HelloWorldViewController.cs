@@ -25,12 +25,6 @@ namespace HelloWorld
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
-
-		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
-		{
-			// Return true for supported orientations
-			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
-		}
 	}
 }
 

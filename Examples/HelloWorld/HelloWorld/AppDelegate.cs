@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-using PixateFramework;
+using PixateFreestyleLib;
 
 namespace HelloWorld
 {
@@ -28,8 +28,8 @@ namespace HelloWorld
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-			Pixate.CurrentApplicationStylesheet ().MonitorChanges = true;
-			Console.WriteLine ("CSS FILE: " + Pixate.CurrentApplicationStylesheet ().FilePath);
+			PixateFreestyle.CurrentApplicationStylesheet ().MonitorChanges = true;
+			Console.WriteLine ("CSS FILE: " + PixateFreestyle.CurrentApplicationStylesheet ().FilePath);
 
 			// Make the main window styleable
 			window.SetStyleMode (PXStylingMode.PXStylingNormal);

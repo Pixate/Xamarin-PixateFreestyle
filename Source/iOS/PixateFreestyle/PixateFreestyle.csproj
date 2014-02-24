@@ -56,8 +56,6 @@
     <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="..\..\..\..\..\..\..\Desktop\Builds\Xamarin\Pixate.framework\Versions\2.0\Pixate">
-      <Link>Pixate</Link>
-    </ObjcBindingNativeLibrary>
+    <ObjcBindingNativeLibrary Include="PixateFreestyle" />
   </ItemGroup>
 </Project>

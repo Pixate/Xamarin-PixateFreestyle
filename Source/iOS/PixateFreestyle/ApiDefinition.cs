@@ -23,13 +23,13 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
 //
-// API mapping for Pixate Framework API version 2 or greater
+// API mapping for PixateFreestyle API version 2 or greater
 //
 
-namespace PixateFramework
+namespace PixateFreestyleLib
 {
 	[BaseType (typeof (NSObject))]
-	interface Pixate {
+	interface PixateFreestyle {
 
 		[Static, Export ("version")]
 		string Version { get; }
@@ -40,20 +40,14 @@ namespace PixateFramework
 		[Static, Export ("buildDate")]
 		NSDate BuildDate { get; }
 
-		[Static, Export ("licenseEmail")]
-		string LicenseEmail { get; }
-
-		[Static, Export ("licenseKey")]
-		string LicenseKey { get; }
-
 		[Static, Export ("refreshStylesWithOrientationChange")]
 		bool RefreshStylesWithOrientationChange { get; set; }
 
 		[Static, Export ("configuration")]
-		PixateConfiguration Configuration { get; }
+		PixateFreestyleConfiguration Configuration { get; }
 
-		[Static, Export ("licenseKey:forUser:")]
-		void LicenseKeyForUser(string key, string user);
+		[Static, Export ("initializePixateFreestyle")]
+		void InitializePixateFreestyle();
 
 		[Static, Export ("selectFromStyleable:usingSelector:")]
 		NSObject[] SelectFromStyleableUsingSelector(NSObject styleable, string Selector);
@@ -113,7 +107,7 @@ namespace PixateFramework
 	}
 
 	[BaseType (typeof (NSObject))]
-	interface PixateConfiguration {
+	interface PixateFreestyleConfiguration {
 		[Export ("parseErrorDestination")]
 		PXParseErrorDestination ParseErrorDestination { get; set; }
 

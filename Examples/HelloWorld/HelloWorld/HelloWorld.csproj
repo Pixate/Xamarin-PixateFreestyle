@@ -86,8 +86,8 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="Pixate">
-      <HintPath>..\..\..\Source\Pixate\Pixate.dll</HintPath>
+    <Reference Include="PixateFreestyle">
+      <HintPath>..\..\..\Source\iOS\PixateFreestyle\PixateFreestyle.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

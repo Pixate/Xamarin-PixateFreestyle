@@ -1,9 +1,10 @@
-button {
-	text			 : Hello From Pixate!
+.button {
+	text             : "Pixate Freestyle!";
 	color            : #446620;
 	background-color : linear-gradient(#87c44a, #b4da77);
-	border-width     : 1px;
+	border-width     : 3px;
 	border-color     : #84a254;
+	border-style     : solid;
 	border-radius    : 10px;
 	font-size        : 20px;
 }
@@ -14,7 +15,6 @@ button {
 
 .bordered {
 	border-style: solid;
-	border-width: 5;
-	border-color: gray;
+	border-width: 5px;
+	border-color: linear-gradient(gray, darkgray);;
 }
-

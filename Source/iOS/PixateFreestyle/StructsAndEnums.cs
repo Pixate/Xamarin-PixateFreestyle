@@ -22,7 +22,7 @@ using System;
 // Structures and enums for Pixate Framework API version 2 or greater
 //
 
-namespace PixateFramework
+namespace PixateFreestyleLib
 {
 	public enum PXStylesheetOrigin
 	{
