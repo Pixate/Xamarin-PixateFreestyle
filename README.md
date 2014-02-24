@@ -1,75 +1,81 @@
-Xamarin-Pixate
-================
+# Xamarin-PixateFreesytle
 
-To demonstrate the use of Pixate 2.0 within Xamarin.iOS, we'll be using Xamarin Studio. Let's get started by creating a new solution. We'll start with creating a C# -> iOS -> Single View Application solution:
+Pixate Freestyle is a native iOS (and [Android](https://github.com/pixate/pixate-freestyle-android)) library that styles native controls with CSS. With Freestyle, you can replace many complicated lines of code with a few lines of CSS. This simplifies and centralizes your styling code, and [offers other benefits](http://www.pixate.com/) as well.
 
-![Single View Application](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/single_view_application.png)
+This repo contains the iOS and Android (coming soon) modules for Xamarin.iOS and Xamarin.Android. 
+
+## Getting Started
+
+### Quick Start
+
+The fastest way to get started is to download the latest pre-compiled DLL from the [releases section](https://github.com/Pixate/Xamarin-PixateFreestyle/releases) of this repo. You can now clone this repo and run the [HelloWorld example project](https://github.com/Pixate/Xamarin-PixateFreestyle/tree/master/Examples). Be sure to **update the location of the PixateFreestyle.dll** in the sample project to wherever you placed your downloaded copy.
+
+### Creating a Sample Project
+	
+Let's get started by creating a new solution. We'll start with creating a C# -> iOS -> Single View Application solution:
+
+![Single View Application](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/single_view_application.png)
 
 Name your project and click 'OK'.
 
-## Adding the Pixate Library
+## Adding the Pixate Freestyle Library
 
 Now right-click on your project's References folder in the Solution view and select 'Edit References...'.
 
-![Add Native Ref](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/edit_reference.png)
+![Add Native Ref](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/edit_reference.png)
 
-Now add the `Pixate.dll` file that you can get from the Binaries folder of this repo if you don't already have it.  You can also [build the DLL](#pixatedll-build-instructions) yourself.
+Now add the `PixateFreestyle.dll` file that you can get from [releases section](https://github.com/Pixate/Xamarin-PixateFreestyle/releases) of this repo if you don't already have it. You can also [build the DLL](#pixatedll-build-instructions) yourself.
 
 The dialog should look something like this:
 
-![Add Native Ref](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/add_pixate_dll.png)
+![Add Pixate Freestyle DLL](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/add_pixate_dll.png)
 
 ## Adding a CSS File
 
 Now right-click on your project again in the Solution view and select Add -> New File. Choose 'Misc' from the list on the left, and 'Empty Text File' from the list in the middle. Name your file 'default.css'.
 
-![Add CSS File](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/add_css_file.png)
+![Add CSS File](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/add_css_file.png)
 
 Right-click on the `default.css` file you added and select the 'Properties' menu item. Over on the Properties panel, change 'Build action' to be 'Content'.
 
-![Default to Content](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/default_to_content.png)
+![Default to Content](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/default_to_content.png)
 
 ## Setting up for Styling
 
 At this point, let's add a button or two to our application. Double-click on the .xib file for your project (e.g. <ProjectName>ViewController.xib). Add a couple of buttons like the following:
 
-![Two Buttons](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/two_buttons.png)
+![Two Buttons](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/two_buttons.png)
 
 With each of the new buttons you added, select one, activate the Identity Inspector in the Utilities View.
 
 Now we need to give the buttons a "styleId" so that you can reference it from your CSS. We'll add a Runtime Attribute. Click the small '+' and add an entry with a key path of `styleId`, a type of `String`, and a value of `button1`. For the second button add a `styleId`, a type of `String`, and a value of `button2`.
 
-![Runtime Attribute](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/styleId.png)
+![Runtime Attribute](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/styleId.png)
 
-Now save and close Xcode.
-
-## Set up the Pixate license
-
-At the top of your *Main.cs* file, add this import line:
+Now save and close Xcode. In your Main.cs file, be sure to add the following line:
 
 ```csharp
-	using PixateLib;
+	PixateFreestyleLib.PixateFreestyle.InitializePixateFreestyle ();
 ```
 
-Then, at the beginning of your Main method, add this line:
+Your Main() would look something like this:
 
 ```csharp
-	Pixate.LicenseKeyForUser("SERIAL NUMBER", "USER NAME");
+	// This is the main entry point of the application.
+	static void Main (string[] args)
+	{
+		// This is not strictly required right now, but a good practice to add for future feature support
+		PixateFreestyleLib.PixateFreestyle.InitializePixateFreestyle ();
+
+		// if you want to use a different Application Delegate class from "AppDelegate"
+		// you can specify it here.
+		UIApplication.Main (args, null, "AppDelegate");
+	}
 ```
 
-Be sure to replace *SERIAL NUMBER* and *USER NAME* with your licensing information. If you do not have a license and wish to run in free mode, you will still need this line of code. Simply replace *SERIAL NUMBER* and *USER NAME* with empty strings.
+Before we style the buttons, go ahead and run the project in Xamarin Studio. It should look something like this:
 
-In your *AppDelegate.cs* file, in your *FinishedLaunching* method, anywhere *after* you have created your window but *before* you call MakeKeyAndVisible(), add the following:
-
-```csharp
-	window.SetStyleMode (PXStylingMode.PXStylingNormal);
-```
-
-This tells the root window to style all of its subviews.
-
-Before we style the buttons, go ahead and run the project in MonoDevelop. It should look something like this:
-
-![Buttons Runs](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/buttons_run.png)
+![Buttons Runs](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/buttons_run.png)
 
 ## Styling the Buttons
 
@@ -96,7 +102,7 @@ Now comes the easy part, just open your default.css file and add some CSS. For o
 
 Now Run your project. Your buttons should look like this:
 
-![Styled Buttons](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/styled_buttons.png)
+![Styled Buttons](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/styled_buttons.png)
 
 Here's some slightly fancier styling you can try:
 
@@ -124,17 +130,25 @@ Here's some slightly fancier styling you can try:
 
 Now you'll get pretty buttons like this:
 
-![Pretty Buttons](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/pretty_buttons.png)
+![Pretty Buttons](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/pretty_buttons.png)
 
 Coding Your UI
 --------------
 
-If you programmatically create your UI, this library [*will soon*] support the full API from the [Pixate Dev Reference](http://www.pixate.com/documentation.html). In addition, the following three methods are provided to set ID, Class, and CSS on your controls/views:
+For any code you write that needs to use some of the Pixate Freestyle API, be sure to add the using line:
+
+```csharp
+using PixateFreestyleLib;
+```
+
+To learn about the API that is exposed, be sure to look over the source code for your platform in this repo to see what is currently supported. In addition, the following five methods are provided to set ID, Class, and CSS on your controls/views:
 
 ```csharp
 	view.SetStyleId("StyleID");
-	view.SetStyleClass("StyleClass");
 	view.SetStyleCSS("StyleCSS");
+	view.SetStyleClass("StyleClass");
+	view.AddStyleClass("AClassName");
+	view.RemoveStyleClass("AClassName");
 ```
 
 For example, here's some code that creates 3 buttons, each with a unique ID, all three with the same Class, and the third styled inline with CSS:
@@ -186,35 +200,35 @@ The CSS for these three buttons could be:
 
 And you would get something like this:
 
-![](https://raw.github.com/Pixate/MonoTouch-Pixate/master/Screenshots/monotouch-sample1.png)
+![](https://raw.github.com/Pixate/MonoTouch-PixateFreestyle/master/Screenshots/monotouch-sample1.png)
 
 ## Making changes in real-time
 
 To turn on real-time monitoring of your CSS for live editing, first you'll need to turn on file monitoring in your AppDelegate, anywhere in the FinishedLaunching method. Add the following:
 
 ```csharp
-	Pixate.CurrentApplicationStylesheet().MonitorChanges = true;
+	PixateFreestyle.CurrentApplicationStylesheet().MonitorChanges = true;
 ```
 
 You may want to print out the location of the CSS file Pixate is using so you can edit it (by default your default.css will be loaded out of your app's resources). Use the following to get the temporary CSS file location:
 
 ```csharp
-	string path = Pixate.CurrentApplicationStylesheet().FilePath;
+	string path = PixateFreestyle.CurrentApplicationStylesheet().FilePath;
 ```
 
 You'll want to print this location out to the console and then edit it. Be sure to save your changes to another file before you run your app again, otherwise your changes will be overwritten. Alternetaively, you can load your CSS from a location on your file system during development (i.e. a DropBox folder) to easier editing: 
 
 ```csharp
-	Pixate.StyleSheetFromFilePathWithOrigin("/some/path/myStyle.css", PXStylesheetOrigin.PXStylesheetOriginApplication);
+	PixateFreestyle.StyleSheetFromFilePathWithOrigin("/some/path/myStyle.css", PXStylesheetOrigin.PXStylesheetOriginApplication);
 ```
 
-## Pixate.dll Build Instructions
+## PixateFreestyle.dll Build Instructions
 
 If you'd like to build the DLL yourself, this is the simple process.
-After cloning this project, start by creating a symbolic link to the Pixate file from your Pixate distribution in the Source folder. For example:
+After cloning this project, start by creating a symbolic link to the PixateFreestyle file from your Pixate Freestyle distribution in the Source folder. For example:
 
-    cd Source
-	ln -s ~/Desktop/Pixate/Frameworks/Pixate.framework/Pixate   .
+    cd Source/iOS/PixateFreestyle
+	ln -s ~/Desktop/Pixate/Frameworks/PixateFreestyle.framework/PixateFreestyle   .
 
 Make sure the path to the MonoTouch BTOUCH tool is properly set at the top of the Makefile:
 
@@ -224,10 +238,8 @@ Now just type make:
 
 	make
 
-The resulting `Pixate.dll` file can now be added to your MonoTouch project.
+The resulting `PixateFreestyle.dll` file can now be added to your MonoTouch project.
 
 ## License
 
-License for the included demos is available in the accompanying [LICENSE.md](https://github.com/Pixate/MonoTouch-Pixate/blob/master/Demos/LICENSE.md) file.
-
-License for the included source is available in the accompanying [LICENSE.md](https://github.com/Pixate/MonoTouch-Pixate/blob/master/Source/LICENSE.md) file.
+License for the included source is available in the accompanying [LICENSE](https://github.com/Pixate/Xamarin-PixateFreestyle/blob/master/LICENSE) file.

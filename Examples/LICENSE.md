@@ -4,7 +4,7 @@ with the code, modify, redistribute, embed in your products (free or
 commercial), but you must include copyright, terms of usage and
 disclaimer as stated in the license. 
 
-Copyright (c) 2012-2013, Pixate, Inc
+Copyright (c) 2012-2014, Pixate, Inc
 All rights reserved.
 
 Redistribution and use in source or binary forms,
