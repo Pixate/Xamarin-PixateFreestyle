@@ -1,0 +1,89 @@
+﻿<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+	
+	<remove-node path="/api/package[@name='com.pixate.freestyle.styling.combinators']/class[@name='PXCombinatorBase']/method[@name='matches' and count(parameter)=1 and parameter[1][@type='java.lang.Object']]" />
+	<attr path="/api/package[@name='com.pixate.freestyle.styling.selectors']/class[@name='PXSpecificity']/method[@name='compareTo' and count(parameter)=1 and parameter[1][@type='com.pixate.freestyle.styling.selectors.PXSpecificity']]" name="virtual">false</attr>
+	<attr path="/api/package[@name='com.pixate.freestyle.util']/class[@name='Scanner']/method[@name='next' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	
+	<!--- IComparable solution  (https://bugzilla.xamarin.com/show_bug.cgi?id=8112)  -->
+	<add-node path="/api/package/class[implements[@name='java.lang.Comparable']]">
+		<method name="compareTo" return="int" abstract="false" native="false" synchronized="false" static="false" final="false" deprecated="not deprecated" visibility="public">
+			<parameter name="o" type="java.lang.Object" />
+		</method>
+	</add-node>
+	<add-node path="/api/package/class[implements[@name='java.util.Comparator']]">
+		<method name="compare" return="int" abstract="false" native="false" synchronized="false" static="false" final="false" deprecated="not deprecated" visibility="public">
+			<parameter name="o1" type="java.lang.Object" />
+			<parameter name="o2" type="java.lang.Object" />
+		</method>
+	</add-node>
+
+	<!-- Remove duplicated that hides inherited fields (http://forums.xamarin.com/discussion/9117/binding-generator-skipping-due-to-duplicate-field-method-or-nested-type-name) -->
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.paints']/class[@name='PXGradient']/field[@name='gradientUnits']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.paints']/class[@name='PXRadialGradient']/field[@name='center']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.paints']/class[@name='PXRadialGradient']/field[@name='radius']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.strokes']/class[@name='PXStroke']/field[@name='color']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXArc']/field[@name='endingAngle']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXArc']/field[@name='radius']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXArc']/field[@name='startingAngle']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='clippingPath']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='fillColor']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='opacity']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='owningDocument']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='padding']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='parent']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='path']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='shadow']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='stroke']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='transform']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShape']/field[@name='visible']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShapeDocument']/field[@name='bounds']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShapeDocument']/field[@name='padding']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShapeDocument']/field[@name='parentView']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShapeDocument']/field[@name='shape']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.shapes']/class[@name='PXShapeDocument']/field[@name='transform']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.strokes']/class[@name='PXStroke']/field[@name='dashOffset']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.strokes']/class[@name='PXStroke']/field[@name='lineCap']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.strokes']/class[@name='PXStroke']/field[@name='lineJoin']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.strokes']/class[@name='PXStroke']/field[@name='miterLimit']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.strokes']/class[@name='PXStroke']/field[@name='type']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.cg.strokes']/class[@name='PXStroke']/field[@name='width']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.styling']/class[@name='PXDeclarationContainer']/field[@name='declarations']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.styling.combinators']/class[@name='PXCombinatorBase']/field[@name='lhs']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.styling.combinators']/class[@name='PXCombinatorBase']/field[@name='rhs']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.styling.parsing']/class[@name='PXStylesheetTokenType']/field[@name='class']" />
+	<remove-node path="/api/package[@name='com.pixate.freestyle.styling.parsing']/class[@name='Terminals']/field[@name='class']" />
+
+	
+	<!--- Normalization -->
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='getAdapter']/parameter[@name='p0']" name="name">view</attr>	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='getStyleClass']/parameter[@name='p0']" name="name">view</attr>	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='getStyleId']/parameter[@name='p0']" name="name">view</attr>	
+
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyleId']/parameter[@name='p0']" name="name">view</attr>	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyleId']/parameter[@name='p1']" name="name">cssId</attr>
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyleId']/parameter[@name='p2']" name="name">restyle</attr>
+
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyleClass']/parameter[@name='p0']" name="name">view</attr>	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyleClass']/parameter[@name='p1']" name="name">cssClass</attr>	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyleClass']/parameter[@name='p2']" name="name">restyle</attr>
+
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyle']/parameter[@name='p0']" name="name">view</attr>
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='setStyle']/parameter[@name='p1']" name="name">cssStyle</attr>	
+	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='init' and count(parameter)=4 and parameter[1][@type='android.view.View']]/parameter[@name='p0']" name="name">view</attr>
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='init' and count(parameter)=1 and parameter[1][@type='android.app.Fragment']]/parameter[@name='p0']"  name="name">fragment</attr>
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='init' and count(parameter)=1 and parameter[1][@type='android.content.Context']]/parameter[@name='p0']"  name="name">context</attr>
+
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='init']/parameter[@name='p1']" name="name">cssId</attr>	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='init']/parameter[@name='p2']" name="name">cssClass</attr>	
+	<attr path="/api/package[@name='com.pixate.freestyle']/class[@name='PixateFreestyle']/method[@name='init']/parameter[@name='p3']" name="name">cssStyle</attr>	
+
+
+</metadata>
