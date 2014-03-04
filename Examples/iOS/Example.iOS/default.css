@@ -1,0 +1,15 @@
+﻿
+#button1 {
+    background-color : yellow;
+    border-width     : 2px;
+    border-color     : black;
+    border-radius    : 8px;
+    border-style     : solid;
+}
+#button2 {
+    background-color : gray;
+    border-width     : 2px;
+    border-color     : black;
+    border-radius    : 8px;
+    border-style     : solid;
+}
