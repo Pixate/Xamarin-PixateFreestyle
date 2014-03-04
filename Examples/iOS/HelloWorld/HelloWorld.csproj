@@ -86,9 +86,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="PixateFreestyle">
-      <HintPath>..\..\..\Source\iOS\PixateFreestyle\PixateFreestyle.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -111,5 +108,11 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <BundleResource Include="Resources\default.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\iOS\PixateFreestyle\PixateFreestyle.csproj">
+      <Project>{9037BF82-0939-44F5-8C47-AB825BBF8D4F}</Project>
+      <Name>PixateFreestyle</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
