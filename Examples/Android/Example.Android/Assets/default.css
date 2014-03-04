@@ -1,5 +1,12 @@
-﻿
-Button {
-  background-color: red;
+﻿bug {} /* This line needs to be here for now, there's a bug. */
+
+#myButton {
+  	background-color: yellow;
 }
 
+.myButtons {
+  	color: black;
+  	background-color: green;
+  	border-radius: 10;
+}
+ 

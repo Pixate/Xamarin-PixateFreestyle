@@ -20,11 +20,9 @@ namespace Example
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			var button = FindViewById<Button> (Resource.Id.myButton);
-
-			Com.Pixate.Freestyle.PixateFreestyle.SetStyleId (button, "myButton");
+			// The styleClass can be set directly in the XML (via a 'class' propertyn), but in code, you would do it like this:
+			//var button = FindViewById<Button> (Resource.Id.myButton);
+			//Com.Pixate.Freestyle.PixateFreestyle.SetStyleClass (button, "myButtons");
 		}
 	}
 }
-
-

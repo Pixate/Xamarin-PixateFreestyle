@@ -5,11 +5,13 @@
     border-color     : black;
     border-radius    : 8px;
     border-style     : solid;
+    font-size        : 12;
 }
 #button2 {
-    background-color : gray;
+    background-color : lightblue;
     border-width     : 2px;
     border-color     : black;
     border-radius    : 8px;
     border-style     : solid;
+    font-size        : 12;
 }

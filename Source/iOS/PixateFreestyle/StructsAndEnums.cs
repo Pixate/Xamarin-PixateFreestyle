@@ -19,7 +19,7 @@
 using System;
 
 //
-// Structures and enums for Pixate Framework API version 2 or greater
+// Structures and enums for Pixate Freestyle API version 2 or greater
 //
 
 namespace PixateFreestyleLib
