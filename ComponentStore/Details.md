@@ -1,4 +1,4 @@
-# Pixate Freesytle
+# Pixate Freestyle
 
 Pixate Freestyle is a native iOS and Android library that styles native controls with CSS. With Freestyle, you can replace many complicated lines of code with a few lines of CSS. This simplifies and centralizes your styling code, and [offers other benefits](http://www.pixate.com/) as well.
 
@@ -28,6 +28,6 @@ A quick example of what you can do in Freestyle, here is some sample CSS and the
     }
 ```
 
-![](pretty_buttons.png)
+![](https://raw.github.com/Pixate/Xamarin-PixateFreestyle/master/ComponentStore/pretty_buttons.png)
 
 
