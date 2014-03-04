@@ -240,6 +240,10 @@ Now just type make:
 
 The resulting `PixateFreestyle.dll` file can now be added to your Xamarin Studio project.
 
+## Mailing List & Twitter
+
+Keep up with notifications and announcements by joining Pixate's [mailing list](http://pixatesurvey.herokuapp.com) and [follow us](http://twitter.com/Pixate) on Twitter.
+
 ## License
 
 License for the included source is available in the accompanying [LICENSE](https://github.com/Pixate/Xamarin-PixateFreestyle/blob/master/LICENSE) file.
