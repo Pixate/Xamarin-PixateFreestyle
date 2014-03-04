@@ -13,7 +13,7 @@ PIXATE_WEBSITE_URL="http://www.pixate.com"
 PIXATE_DOCS_URL="http://github.com/Pixate/Xamarin-PixateFreestyle"
 PIXATE_SRC_URL="http://github.com/Pixate/Xamarin-PixateFreestyle"
 
-PIXATE_PKG_VERSION="1.0.0"
+PIXATE_PKG_VERSION="2.1.0"
 PIXATE_PKG_NAME="PixateFreestyle"
 
 PIXATE_ANDROID_SAMPLE_DESC="Pixate Freestyle Xamarin.Android Sample.  Demonstrates how to use the Pixate Freestyle CSS Styling engine with Xamarin.Android"
