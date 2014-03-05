@@ -2,7 +2,7 @@
 
 DOCS_PATH="."
 LICENSE_PATH="../LICENSE"
-COMP_PUBLISHER="Pixate"
+COMP_PUBLISHER="Pixate, Inc."
 SAMPLES_PATH="../Examples"
 
 PIXATE_NAME="Pixate Freestyle"
