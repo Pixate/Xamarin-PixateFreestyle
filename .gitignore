@@ -9,6 +9,4 @@ obj/
 /Source/iOS/PixateFreestyle/PixateFreestyle
 /Source/iOS/PixateFreestyle/PixateFreestyle.dll
 
-/ComponentStore/PixateFreestyle-1.0.0.xam
-
-/ComponentStore/PixateFreestyle-2.1.0.xam
+/ComponentStore/PixateFreestyle-*.xam
