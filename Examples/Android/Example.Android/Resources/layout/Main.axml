@@ -10,9 +10,9 @@
         android:text="@string/hello"
         class="myButtons" />
     <Button
-        android:text="Button 2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/myButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
         class="myButtons" />
 </LinearLayout>
