@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.iOS", "Example.iOS\Example.iOS.csproj", "{3F241D5D-96CE-45A9-A5A6-4E8BB50A4EEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixateFreestyle", "..\..\Source\iOS\PixateFreestyle\PixateFreestyle.csproj", "{9037BF82-0939-44F5-8C47-AB825BBF8D4F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -27,18 +25,6 @@ Global
 		{3F241D5D-96CE-45A9-A5A6-4E8BB50A4EEB}.Release|iPhone.Build.0 = Release|iPhone
 		{3F241D5D-96CE-45A9-A5A6-4E8BB50A4EEB}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{3F241D5D-96CE-45A9-A5A6-4E8BB50A4EEB}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.AppStore|iPhone.Build.0 = Release|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Release|iPhone.Build.0 = Release|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{9037BF82-0939-44F5-8C47-AB825BBF8D4F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Example.iOS\Example.iOS.csproj
