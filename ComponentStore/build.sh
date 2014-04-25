@@ -13,7 +13,7 @@ PIXATE_WEBSITE_URL="http://www.pixate.com"
 PIXATE_DOCS_URL="http://github.com/Pixate/Xamarin-PixateFreestyle"
 PIXATE_SRC_URL="http://github.com/Pixate/Xamarin-PixateFreestyle"
 
-PIXATE_PKG_VERSION="2.1.2"
+PIXATE_PKG_VERSION="2.1.3"
 PIXATE_PKG_NAME="PixateFreestyle"
 
 PIXATE_ANDROID_SAMPLE_DESC="Pixate Freestyle Xamarin.Android Sample.  Demonstrates how to use the Pixate Freestyle CSS Styling engine with Xamarin.Android"
@@ -23,7 +23,11 @@ PIXATE_IOS_SAMPLE_DESC="Pixate Freestyle Xamarin.iOS Sample.  Demonstrates how t
 PIXATE_IOS_SAMPLE_SLN="../Examples/iOS/Example.iOS.sln"
 
 PIXATE_ANDROID_LIB_NAME="../Source/Android/PixateFreestyle/bin/Release/PixateFreestyle.dll"
-PIXATE_IOS_LIB_NAME="../Source/iOS/PixateFreestyle/bin/Release/PixateFreestyle.dll"
+
+# This version is built when compiled in Xamarin Studio
+#PIXATE_IOS_LIB_NAME="../Source/iOS/PixateFreestyle/bin/Release/PixateFreestyle.dll"
+# This version is built when using make, we'll use this version
+PIXATE_IOS_LIB_NAME="../Source/iOS/PixateFreestyle/PixateFreestyle.dll"
 
 echo '******************************************************'
 echo '*      Pixate Freestyle Component Build Script       *'
